@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aerials</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <div class="header-logo">
+          <img src="./images/logo.png" class="header-logo-img" alt="logo" />
+          <h1 class="header-logo-title">
+            Фристайл. <br />
+            Лыжная акробатика
+          </h1>
+        </div>
+        <button type='button' class="header-burger">
+           <span></span>
+        </button>
+        <div class="header-menu-wrapper">
+          <nav class="header-menu">
+            <div class="header-topnav">
+              <a href="index.html">Главная</a>
+              <a href="athletes.html">Спортсмены</a>
+              <a href="calendar.html">Каленадрь и соревнования</a>
+              <a href="news.html">Новости</a>
+              <a href="docs.html">Документы</a>
+              <a href="media.html">Социальные сети</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="news">
+      <div class="container news-container">
+        <section id="slider_bl">
+          <div class="wrapper">
+            <input checked type=radio name="slider" id="slide1" />
+            <input type=radio name="slider" id="slide2" />
+            <input type=radio name="slider" id="slide3" />
+            <input type=radio name="slider" id="slide4" />
+            <div class="slider-wrapper">
+              <div class=inner>
+                <article>
+                  <div class="info top-left">
+                    <h3>Результаты соревнований по фристайлу «Кубок Чемпионов»</h3></div>
+                  <img src="./images/news/cupchampmain.jpeg" />
+                </article>
+                <article>
+                  <div class="info bottom-left">
+                    <h3>Беларусь и Россия продолжат развивать сотрудничество в лыжной акробатике</h3></div>
+                  <img src="./images/news/sotr1.jpeg" />
+                </article>
+                <article>
+                  <div class="info bottom-left">
+                    <h3>Состоялась отчетно-выборочная Конференция Союза «Белорусский лыжный союз»</h3></div>
+                  <img src="./images/news/konfmain.jpeg"/>
+                </article>
+                <article>
+                  <div class="info top-right">
+                    <h3>3 и 4 сентября состоится Открытый чемпионат Беларуси по прыжкам на лыжах в воду</h3></div>
+                  <img src="./images/news/afisha.jpeg" />
+                </article>
+              </div>
+            </div>
+            <div class="slider-prev-next-control">
+              <label for=slide1></label>
+              <label for=slide2></label>
+              <label for=slide3></label>
+              <label for=slide4></label>
+            </div>
+            <div class="slider-dot-control">
+              <label for=slide1></label>
+              <label for=slide2></label>
+              <label for=slide3></label>
+              <label for=slide4></label>
+            </div>
+          </div>
+      </section>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
