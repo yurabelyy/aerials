@@ -9,6 +9,8 @@ body {
   letter-spacing: 0.1px;
   position: relative;
   min-height: 100vh;
+  background: url(../images/background/bg9.jpg)no-repeat fixed;
+  background-size: 100% 100%;
 }
 
 .container {
@@ -88,10 +90,10 @@ body {
   font-size: 8px;
   text-transform: uppercase;
   background: orangered;
-  border: 1px solid orangered;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
-  color: #fff;
+  color: #000000;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   text-decoration: none;
@@ -100,7 +102,7 @@ body {
 
 .header-topnav a:hover {
   background: inherit;
-  color: orangered;
+  color: rgb(255, 255, 255);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -191,8 +193,8 @@ body {
     position: absolute;
     /* background: #f9f9fa; */
     background: orangered;
-    -webkit-box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
-            box-shadow: 0px 2px 4px rgba(191, 196, 201, 0.2), 0px 3px 4px rgba(191, 196, 201, 0.18), 0px 1px 5px rgba(191, 196, 201, 0.24);
+    -webkit-box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.555), 0px 3px 4px rgba(255, 255, 255, 0.541), 0px 1px 5px rgba(255, 255, 255, 0.486);
+            box-shadow: 0px 2px 4px rgba(253, 253, 253, 0.425), 0px 3px 4px rgba(255, 255, 255, 0.486), 0px 1px 5px rgba(252, 252, 252, 0.466);
     border-radius: 10px;
     right: 40px;
     padding: 10px;
@@ -286,6 +288,9 @@ body {
 }
 
 .athletes-item {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid orangered;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -295,7 +300,7 @@ body {
   width: 200px;
   height: 200px;
   object-fit: contain;
-  border-radius: 100px;
+  /* border-radius: 100px; */
   transition: 1s all ease-in-out;
 }
 .athletes-image:hover {
