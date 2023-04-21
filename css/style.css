@@ -45,7 +45,7 @@ body {
 /* Header Styles */
 .header {
   padding-top: 15px;
-  width: 100vw;
+  width: 100%;
 }
 
 .header-container {
@@ -80,7 +80,15 @@ body {
 .header-logo-title {
   text-transform: uppercase;
   font-size: 13px;
+  font-weight: 500;
   line-height: 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+.header-logo-title-link{
+  text-decoration: none;
+  color: #000;
 }
 
 .header-topnav a {
@@ -89,7 +97,7 @@ body {
   background: inherit;
   font-size: 8px;
   text-transform: uppercase;
-  background: orangered;
+  background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
@@ -189,8 +197,8 @@ body {
     width: 200px;
     /* height: 250px; */
     height: 200px;
-    display: block;
-    position: absolute;
+    display:block;
+    position:absolute;
     /* background: #f9f9fa; */
     background: orangered;
     -webkit-box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.555), 0px 3px 4px rgba(255, 255, 255, 0.541), 0px 1px 5px rgba(255, 255, 255, 0.486);
@@ -299,17 +307,19 @@ body {
 .athletes-image {
   width: 200px;
   height: 200px;
-  object-fit: contain;
+  object-fit:scale-down;
   /* border-radius: 100px; */
   transition: 1s all ease-in-out;
 }
-.athletes-image:hover {
-  object-fit:fill;
-}
+
+/* .athletes-image:hover {
+  object-fit:cover;
+} */
 
 .athletes-info-text {
   margin-bottom: 10px;
 }
+
 .athletes-info-text:last-child {
   margin-bottom: 0;
 }
@@ -384,7 +394,7 @@ body {
   width:40px;
   height:40px;
   border-radius:50%;
-  background:#fff;
+  background:#ffffffbe;
   opacity:.7;
 }
 #slider_bl .slider-prev-next-control label:hover{
@@ -584,3 +594,5 @@ body {
     padding:0 80px
   }
 }
+
+/*TOP BUTTON*/

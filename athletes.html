@@ -12,16 +12,30 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .scale {
+        display: inline-block;
+        overflow:hidden; 
+       }
+       .scale img {
+        transition: 1s;
+        display: block;
+       }
+       .scale img:hover {
+        transform: scale(1.2); 
+        object-fit:scale-down;
+       }
+    </style>
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
         <div class="header-logo">
-          <img src="./images/logo.png" class="header-logo-img" alt="logo" />
-          <h1 class="header-logo-title">
+          <a href="./index.html"><img src="./images/logo.png" class="header-logo-img" alt="logo" /></a>
+          <a class="header-logo-title-link" href="./index.html"><h1 class="header-logo-title">
             Фристайл. <br />
             Лыжная акробатика
-          </h1>
+          </h1></a>
         </div>
         <button type='button' class="header-burger">
            <span></span>
@@ -43,7 +57,7 @@
     <section class="athletes">
       <div class="container athletes-container">
         <div class="athletes-item">
-          <img src="./images/Гуськова.png" class="athletes-image">
+          <a href="./athletes/huskova.html" target="_blank"><div class="scale"><img src="./images/Гуськова.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Гуськова Анна Андреевна</p>
             <p class="athletes-info-text">28.08.1992</p>
@@ -53,7 +67,7 @@
           </div>
         </div>
         <div class="athletes-item">
-          <img src="./images/Гладченко.png" class="athletes-image">
+          <a href="./athletes/gladchenko.html" target="_blank"><div class="scale"><img src="./images/Гладченко.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Гладченко Станислав Александрович</p>
             <p class="athletes-info-text">14.09.1994</p>
@@ -63,7 +77,7 @@
           </div>
         </div>
         <div class="athletes-item">
-          <img src="./images/Тимерцев.png" class="athletes-image">
+          <a href="./athletes/tsimercau.html" target="_blank"><div class="scale"><img src="./images/Тимерцев.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Тимерцев Вячеслав Александрович</p>
             <p class="athletes-info-text">09.05.2000</p>
@@ -73,7 +87,7 @@
           </div>
         </div> 
         <div class="athletes-item">
-          <img src="./images/Дик.png" class="athletes-image">
+          <a href="./athletes/dik.html" target="_blank"><div class="scale"><img src="./images/Дик.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Дик Павел Андреевич</p>
             <p class="athletes-info-text">18.11.1998</p>
@@ -83,7 +97,7 @@
           </div>
         </div> 
         <div class="athletes-item">
-          <img src="./images/деруго.png" class="athletes-image">
+          <a href="./athletes/derugo.html" target="_blank"><div class="scale"><img src="./images/деруго.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Деруго Анна Денисовна</p>
             <p class="athletes-info-text">19.11.2003</p>
@@ -93,7 +107,7 @@
           </div>
         </div> 
         <div class="athletes-item">
-          <img src="./images/Дребенков.png" class="athletes-image">
+          <a href="./athletes/drebenkov.html" target="_blank"><div class="scale"><img src="./images/Дребенков.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Дребенков Игорь Олегович</p>
             <p class="athletes-info-text">24.07.2001</p>
@@ -103,7 +117,7 @@
           </div>
         </div> 
         <div class="athletes-item">
-          <img src="./images/андриянова.png" class="athletes-image">
+          <a href="./athletes/andriyanova.html" target="_blank"><div class="scale"><img src="./images/андриянова.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Андриянова Анастасия Эдуардовна</p>
             <p class="athletes-info-text">08.12.2004</p>
@@ -113,7 +127,7 @@
           </div>
         </div>
         <div class="athletes-item">
-          <img src="./images/кузьмин.png" class="athletes-image">
+          <a href="./athletes/kuzmin.html" target="_blank"><div class="scale"><img src="./images/кузьмин.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Кузьмин Андрей Витальевич</p>
             <p class="athletes-info-text">28.02.2001</p>
@@ -123,7 +137,7 @@
           </div>
         </div>
         <div class="athletes-item">
-          <img src="./images/Митрофанов.png" class="athletes-image">
+          <a href="./athletes/mitrofanov.html" target="_blank"><div class="scale"><img src="./images/Митрофанов.png" class="athletes-image"></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Митрофанов Макар Иванович</p>
             <p class="athletes-info-text">07.08.2003</p>

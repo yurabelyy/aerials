@@ -5,3 +5,4 @@ burger.addEventListener('click', function () {
   headerMenu.classList.toggle('active');
   burger.classList.toggle('active');
 });
+
