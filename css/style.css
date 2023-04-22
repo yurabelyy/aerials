@@ -44,7 +44,7 @@ body {
 }
 /* Header Styles */
 .header {
-  padding-top: 15px;
+  /* padding-top: 15px; */
   width: 100%;
 }
 
@@ -83,12 +83,12 @@ body {
   font-weight: 500;
   line-height: 15px;
   text-decoration: none;
-  color: #000;
+  color: rgb(26, 65, 94);
 }
 
 .header-logo-title-link{
   text-decoration: none;
-  color: #000;
+  color: rgb(26, 65, 94);
 }
 
 .header-topnav a {
@@ -98,10 +98,10 @@ body {
   font-size: 8px;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(26, 65, 94);
   border-radius: 10px;
   cursor: pointer;
-  color: #000000;
+  color: rgb(26, 65, 94);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   text-decoration: none;
@@ -312,12 +312,9 @@ body {
   transition: 1s all ease-in-out;
 }
 
-/* .athletes-image:hover {
-  object-fit:cover;
-} */
-
 .athletes-info-text {
   margin-bottom: 10px;
+  color:rgb(26, 65, 94);
 }
 
 .athletes-info-text:last-child {
@@ -595,4 +592,62 @@ body {
   }
 }
 
-/*TOP BUTTON*/
+/*fullscreen video*/
+.full-screen{
+  position:relative;
+  margin-top:87;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.full-screen__body{
+  padding: 50px 15px;
+  background-color: rgba(255, 95, 71, 0.24);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.full-screen__title{
+  font-size: 50px;
+  color: rgb(255, 173, 161);
+  letter-spacing: 25px;
+  font-weight: 700;
+  margin: 0px 0px 20px 0px;
+}
+.full-screen__text{
+ font-size: 18px;
+ color: rgb(255, 173, 161);
+ letter-spacing: 15px;
+}
+.full-screen__video{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+.content{
+  background-color: rgb(255, 95, 71);
+  position: relative;
+  z-index: 5;
+}
+.content__container{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 50px 15px;
+  font-size:18px;
+  color: rgb(26, 65, 94);
+  line-height: 150%; 
+}
+.content__container p{
+  margin: 0px 0px 20px 0px;
+}
+.wrapper{
+  position:relative;
+}
