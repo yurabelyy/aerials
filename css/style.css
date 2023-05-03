@@ -263,7 +263,7 @@ body {
 
 /* main style */
 .main {
-  background-color:rgba(255, 95, 71, 0.538);
+  background-color:rgba(255, 95, 71, 0.537);
   /*margin-left: 170px; /* 150px (ширина сайдбара) + 10px + 10px (2 отступа) */
   /*padding: 10px 0 0 10px;*/
   padding:30px 15px;
@@ -674,13 +674,16 @@ body {
   object-fit:cover;
 }
 .content{
-  background-color: rgb(255, 95, 71);
+  /* background-color: rgb(255, 95, 71); */
   position: relative;
   z-index: 5;
 }
 .content__container{
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgb(26, 65, 94);
+  border-radius: 10px;
   max-width: 1200px;
-  margin: 0px auto;
+  margin: 20px auto;
   padding: 50px 15px;
   font-size:18px;
   color: rgb(26, 65, 94);
