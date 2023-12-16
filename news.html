@@ -8,24 +8,32 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+
     <header class="header">
       <div class="container header-container">
         <div class="header-logo">
-        <a href="./index.html"><img src="./images/logo.png" class="header-logo-img" alt="logo" /></a>
-          <a class="header-logo-title-link" href="./index.html"><h1 class="header-logo-title">
-            Фристайл. <br />
-            Лыжная акробатика
-          </h1></a>
+          <a href="./index.html"
+            ><img src="./images/logo.png" class="header-logo-img" alt="logo"
+          /></a>
+          <a class="header-logo-title-link" href="./index.html"
+            ><h1 class="header-logo-title">
+              Фристайл. <br />
+              Лыжная акробатика
+            </h1></a
+          >
         </div>
-        <button type='button' class="header-burger">
-           <span></span>
+        <button type="button" class="header-burger">
+          <span></span>
         </button>
         <div class="header-menu-wrapper">
           <nav class="header-menu">
@@ -41,54 +49,22 @@
         </div>
       </div>
     </header>
-    <section class="news">
-      <div class="container news-container">
-        <section id="slider_bl">
-          <div class="wrapper">
-            <input checked type=radio name="slider" id="slide1" />
-            <input type=radio name="slider" id="slide2" />
-            <input type=radio name="slider" id="slide3" />
-            <input type=radio name="slider" id="slide4" />
-            <div class="slider-wrapper">
-              <div class=inner>
-                <article>
-                  <div class="info top-left">
-                    <h3>Результаты соревнований по фристайлу «Кубок Чемпионов»</h3></div>
-                  <a href="./news/kubok.html"><img src="./images/news/cupchampmain.jpeg" /></a>
-                </article>
-                <article>
-                  <div class="info bottom-left">
-                    <h3>Беларусь и Россия продолжат развивать сотрудничество в лыжной акробатике</h3></div>
-                  <a href="./news/sortudnichestvo.html"><img src="./images/news/sotr1.jpeg" /></a>
-                </article>
-                <article>
-                  <div class="info bottom-left">
-                    <h3>Состоялась отчетно-выборочная Конференция Союза «Белорусский лыжный союз»</h3></div>
-                  <a href="./news/konference.html"><img src="./images/news/konfmain.jpeg"/></a>
-                </article>
-                <article>
-                  <div class="info top-left">
-                    <h3>3 и 4 сентября состоится Открытый чемпионат Беларуси по прыжкам на лыжах в воду</h3></div>
-                  <a href="./news/championship.html"><img src="./images/news/afisha.jpeg" /></a>
-                </article>
-              </div>
-            </div>
-            <div class="slider-prev-next-control">
-              <label for=slide1></label>
-              <label for=slide2></label>
-              <label for=slide3></label>
-              <label for=slide4></label>
-            </div>
-            <div class="slider-dot-control">
-              <label for=slide1></label>
-              <label for=slide2></label>
-              <label for=slide3></label>
-              <label for=slide4></label>
-            </div>
-          </div>
-      </section>
+    <div class="slider">
+      <a class='slider-item' href="/news/kubok.html"><img class="slider-img" src="images/news/cupchampmain.jpeg" /></a>
+      <a class='slider-item' href="/news/kubok.html"><img class="slider-img" src="images/news/konfmain.jpeg"  /></a>
+      <a class='slider-item' href="/news/kubok.html"><img class="slider-img" src="images/news/sotr1.jpeg" /></a>
+      <a class='slider-item' href="/news/kubok.html"><img class="slider-img" src="images/news/afisha.jpeg" /></a>
+  
+      <div>
+          <img style='opacity: 1; height: 20px;' class="prev controlls" src="images/news/left.png" alt="">
       </div>
-    </section>
+  
+      <div>
+          <img style='opacity: 1; height: 20px;'  class="next controlls" src="images/news/right.png" alt="">
+      </div>
+  
+  </div>
+    </div>  
     <script src="./js/script.js"></script>
   </body>
 </html>

@@ -14,17 +14,25 @@
     />
   </head>
   <body>
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+
     <header class="header">
       <div class="container header-container">
         <div class="header-logo">
-          <a href="./index.html"><img src="./images/logo.png" class="header-logo-img" alt="logo" /></a>
-          <a class="header-logo-title-link" href="./index.html"><h1 class="header-logo-title">
-            Фристайл. <br />
-            Лыжная акробатика
-          </h1></a>
+          <a href="./index.html"
+            ><img src="./images/logo.png" class="header-logo-img" alt="logo"
+          /></a>
+          <a class="header-logo-title-link" href="./index.html"
+            ><h1 class="header-logo-title">
+              Фристайл. <br />
+              Лыжная акробатика
+            </h1></a
+          >
         </div>
-        <button type='button' class="header-burger">
-           <span></span>
+        <button type="button" class="header-burger">
+          <span></span>
         </button>
         <div class="header-menu-wrapper">
           <nav class="header-menu">
@@ -42,11 +50,27 @@
     </header>
     <section class="calendar">
       <div class="container calendar-container">
+        <div class="timer">
+          <label for="timer" style="left: 50%">До следующей олимпиады осталось: </label>
+          <div class="timer__items">
+            <div class="timer__item timer__days">00</div>
+            <div class="timer__item timer__hours">00</div>
+            <div class="timer__item timer__minutes">00</div>
+            <div class="timer__item timer__seconds">00</div>
+          </div>
+        </div>
         <div class="calendar-item">
           <object>
-            <embed  class="cal" src="./images/wc_moae_2223.pdf" width="900" height="700" hspace="10%" /></object>
+            <embed
+              class="cal"
+              src="./images/wc_moae_2223.pdf"
+              width="900"
+              height="700"
+              hspace="10%"
+            />
+          </object>
         </div>
-      </div>    
+      </div>
     </section>
     <script src="./js/script.js"></script>
   </body>
