@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 
 //таймер
 document.addEventListener('DOMContentLoaded', function () {
-  const deadline = new Date(2026, 02, 06);
+  const deadline = new Date(2026, 2, 6);
 
   let timerId = null;
 
