@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aerials</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
+      
+        <?php
+            $website_title="Athletes";
+            require_once 'blocks/head.php';
+        ?>
     <style>
       .scale {
         display: inline-block;
@@ -33,43 +27,17 @@
     </div>
 
     <header class="header">
-      <div class="container header-container">
-        <div class="header-logo">
-          <a href="./index.html"
-            ><img src="./images/logo.png" class="header-logo-img" alt="logo"
-          /></a>
-          <a class="header-logo-title-link" href="./index.html"
-            ><h1 class="header-logo-title">
-              Фристайл. <br />
-              Лыжная акробатика
-            </h1></a
-          >
-        </div>
-        <button type="button" class="header-burger">
-          <span></span>
-        </button>
-        <div class="header-menu-wrapper">
-          <nav class="header-menu">
-            <div class="header-topnav">
-              <a href="index.html">Главная</a>
-              <a href="athletes.html">Спортсмены</a>
-              <a href="calendar.html">Каленадрь и соревнования</a>
-              <a href="news.html">Новости</a>
-              <a href="docs.html">Документы</a>
-              <a href="media.html">Социальные сети</a>
-            </div>
-          </nav>
-        </div>
-      </div>
+      <?=require_once 'blocks/menu.php';?>
     </header>
+
     <section class="athletes">
       <div class="container athletes-container">
         <div class="athletes-item">
-          <a
-            href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=113638"
+          <a href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=113638"
             target="_blank"
-            ><div class="scale"><img src="./images/Гуськова.png" class="athletes-image" /></div
-          ></a>
+            >
+            <div class="scale"><img src="./images/Гуськова.png" class="athletes-image"/></div>
+          </a>
           <div class="athletes-info">
             <p class="athletes-info-text">Гуськова Анна Андреевна</p>
             <p class="athletes-info-text">28.08.1992</p>
@@ -87,8 +55,7 @@
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=153273"
             target="_blank"
-            ><div class="scale"><img src="./images/Гладченко.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/Гладченко.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Гладченко Станислав Александрович</p>
             <p class="athletes-info-text">14.09.1994</p>
@@ -106,8 +73,7 @@
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=189217"
             target="_blank"
-            ><div class="scale"><img src="./images/Тимерцев.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/Тимерцев.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Тимерцев Вячеслав Александрович</p>
             <p class="athletes-info-text">09.05.2000</p>
@@ -125,8 +91,7 @@
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=189223"
             target="_blank"
-            ><div class="scale"><img src="./images/Дик.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/Дик.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Дик Павел Андреевич</p>
             <p class="athletes-info-text">18.11.1998</p>
@@ -144,8 +109,7 @@
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=234464"
             target="_blank"
-            ><div class="scale"><img src="./images/деруго.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/деруго.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Деруго Анна Денисовна</p>
             <p class="athletes-info-text">19.11.2003</p>
@@ -165,8 +129,7 @@
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=197009"
             target="_blank"
-            ><div class="scale"><img src="./images/Дребенков.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/Дребенков.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Дребенков Игорь Олегович</p>
             <p class="athletes-info-text">24.07.2001</p>
@@ -176,8 +139,7 @@
               class="athletes-link"
               href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=197009"
               target="_blank"
-              >FIS</a
-            >
+              >FIS</a>
           </div>
         </div>
         <div class="athletes-item">
@@ -195,16 +157,14 @@
               class="athletes-link"
               href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=236239"
               target="_blank"
-              >FIS</a
-            >
+              >FIS</a>
           </div>
         </div>
         <div class="athletes-item">
           <a
             href="https://www.fis-ski.com/DB/general/athlete-biography.html?sectorcode=FS&competitorid=197010"
             target="_blank"
-            ><div class="scale"><img src="./images/кузьмин.png" class="athletes-image" /></div
-          ></a>
+            ><div class="scale"><img src="./images/кузьмин.png" class="athletes-image" /></div></a>
           <div class="athletes-info">
             <p class="athletes-info-text">Кузьмин Андрей Витальевич</p>
             <p class="athletes-info-text">28.02.2001</p>

@@ -6,15 +6,19 @@
 /* Global Styles */
 body {
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.1px;
   position: relative;
   min-height: 100vh;
   background: url(../images/background/bg9.jpg) no-repeat fixed;
+  /*width: 1920px;*/
+  /*height: 1080px;*/
   background-size: 100% 100%;
 }
 
+body {
+  letter-spacing: 0.1px;
+}
+
 .container {
-  /* width: 100%; */
   z-index: 10;
   width: 90%;
   max-width: 950px;
@@ -93,9 +97,7 @@ body {
 }
 
 .header-topnav a {
-  border: none;
   font-weight: 600;
-  background: inherit;
   font-size: 8px;
   text-transform: uppercase;
   background: rgba(255, 255, 255, 0.6);
@@ -201,14 +203,13 @@ body {
     display: block;
     position: absolute;
     background: rgba(255, 95, 71, 0.792);
-    -webkit-box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.555),
-      0px 3px 4px rgba(255, 255, 255, 0.541), 0px 1px 5px rgba(255, 255, 255, 0.486);
-    box-shadow: 0px 2px 4px rgba(253, 253, 253, 0.425), 0px 3px 4px rgba(255, 255, 255, 0.486),
-      0px 1px 5px rgba(252, 252, 252, 0.466);
+    -webkit-box-shadow: 0 2px 4px rgba(255, 255, 255, 0.555),
+      0 3px 4px rgba(255, 255, 255, 0.541), 0 1px 5px rgba(255, 255, 255, 0.486);
+    box-shadow: 0 2px 4px rgba(253, 253, 253, 0.425), 0 3px 4px rgba(255, 255, 255, 0.486),
+      0 1px 5px rgba(252, 252, 252, 0.466);
     border-radius: 10px;
     right: 40px;
     padding: 10px;
-    border-radius: 10px;
   }
   .header-menu-wrapper.active::before {
     position: absolute;
@@ -224,7 +225,6 @@ body {
   }
   .header-topnav {
     /* padding-top: 50px; */
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
@@ -238,6 +238,11 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
   }
+
+  .header-topnav {
+    display: -webkit-box;
+  }
+
   .header-topnav a {
     width: 200px;
     border-radius: 0;
@@ -272,8 +277,7 @@ body {
 /* news */
 .news-main {
   background-color: rgba(255, 255, 255, 0.6);
-  border: 1px;
-  border-color: orangered;
+  border: 1px orangered;
   border-radius: 10px;
   padding: 30px 15px;
   width: 90%;
@@ -302,7 +306,7 @@ body {
 
 .calendar-container{
   width: 90%;
-  height: 1000;
+  height: auto;
   display: flex;
   flex-direction: column;
   margin:0 auto;
@@ -310,7 +314,6 @@ body {
 
 .cal{
   width: 90%;
-  height: 1000; 
   display: flex;
   margin:0 auto;
 }
@@ -407,11 +410,11 @@ body {
 
 /*fullscreen video*/
 .full-screen {
+  max-width: 950px;
   position: relative;
   z-index: 3;
   display: flex;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -419,8 +422,9 @@ body {
 .full-screen__body {
   padding: 50px 15px;
   position: absolute;
-  top: 40%;
+  top: 35%;
   z-index: 2;
+  width:60%;
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
@@ -434,7 +438,7 @@ body {
   color: rgb(255, 173, 161);
   letter-spacing: 25px;
   font-weight: 700;
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .full-screen__text {
   font-size: 18px;
@@ -446,8 +450,8 @@ body {
   z-index: 1;
   border: 1px solid rgb(26, 65, 94);
   border-radius: 10px;
-  /* width: 93%;
-  margin: 0 auto; */
+  width: 100%;
+  /*margin: 0 auto; */
   object-fit: cover;
 }
 .content {
@@ -459,19 +463,20 @@ body {
   background: rgba(255, 255, 255, 0.6);
   border: 1px solid rgb(26, 65, 94);
   border-radius: 10px;
-  /* width: 90%;
-  margin: 0 auto; */
+  max-width: 950px;
+  width: 91%;
+  margin: 0 auto;
   padding: 30px 15px;
   font-size: 18px;
   color: rgb(26, 65, 94);
   line-height: 150%;
 }
 .content__container p {
-  margin: 0px 0px 20px 0px;
+  margin: 0 0 20px 0;
 }
 .wrapper {
   position: relative;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -555,7 +560,7 @@ body {
   overflow: hidden;
 }
 .slider-img {
-  width: 100%;
+  /*width: 70%;*/
   display:flex;
   margin:0 auto;
   height: 100%;

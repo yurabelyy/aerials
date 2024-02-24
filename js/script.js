@@ -1,4 +1,4 @@
-//адаптивное меню
+//adaptive menu
 const burger = document.querySelector('.header-burger');
 const headerMenu = document.querySelector('.header-menu-wrapper');
 
@@ -7,7 +7,7 @@ burger.addEventListener('click', function () {
   burger.classList.toggle('active');
 });
 
-//лоадер
+//preloader
 let mask = document.querySelector('.mask');
 
 window.addEventListener('load', () => {
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
   }, 600);
 });
 
-//таймер
+//timer
 document.addEventListener('DOMContentLoaded', function () {
   const deadline = new Date(2026, 2, 6);
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
   timerId = setInterval(countdownTimer, 1000);
 });
 
-//слайдер
+//slider
 const images = document.querySelectorAll('.slider-item');
 const controlls = document.querySelectorAll('.controlls');
 let imageIndex = 0;
@@ -76,12 +76,14 @@ controlls.forEach((e) => {
       }
 
       show(index);
-    } else if (event.target.classList.contains('next')) {
-      let index = imageIndex + 1;
-      if (index >= images.length) {
-        index = 0;
+    } else {
+      if (event.target.classList.contains('next')) {
+        let index = imageIndex + 1;
+        if (index >= images.length) {
+          index = 0;
+        }
+        show(index);
       }
-      show(index);
     }
   });
 });
