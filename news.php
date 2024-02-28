@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
       <?php
-        $website_title="News";
-        'blocks/head.php';
+        global $website_title;
+        $website_title = "News";
+        require_once 'blocks/head.php';
       ?>
   </head>
   <body>

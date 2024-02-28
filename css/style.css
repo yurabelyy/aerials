@@ -591,3 +591,7 @@ body {
 .slider .next {
   right: 10px;
 }
+
+#errorBlock{
+  display: none;
+}

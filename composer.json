@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twbs/bootstrap": "5.3.3",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
