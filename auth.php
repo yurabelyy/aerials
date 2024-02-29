@@ -15,7 +15,7 @@
     <header class="header">
       <?=require_once 'blocks/menu.php'?>
     </header>
-<main class="container mt-5">
+<main class="container mt-5 content__container">
      <link rel="stylesheet" href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <div class="row">
@@ -23,22 +23,25 @@
             <?php if($_COOKIE['log'] == ''):?>
             <form action="" method="post">
                 <label for="login">Логин</label>
-                <input type="text" name="login" id="login" class="form-control mt-2 mb-2" placeholder="login" autocomplete="username">
+                <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-50" placeholder="login" autocomplete="username">
 
                 <label for="pass">Пароль</label>
-                <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2" placeholder="*********" autocomplete="current-password">
+                <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2 w-50" placeholder="*********" autocomplete="current-password">
 
-                <div class="alert alert-danger mt-2" id="errorBlock" ></div>
+                <div class="alert alert-danger mt-4 w-50" id="errorBlock" ></div>
 
-                <button type="button" id="auth_user" class="btn btn-success mt-3">
+                <button type="button" id="auth_user" class="btn btn-success mt-4 w-50">
                     Войти
                 </button>
             </form>
             <?php
                 else:
             ?>
-                <h2><?=$_COOKIE['log']?></h2>
-                <button class="btn btn-danger mt-2" id="exit_btn">Выйти</button>
+                <h2>Добрый день, <?=$_COOKIE['log']?>!</h2>
+                <div>
+                    <button class="btn btn-danger mt-2 m-lg-2" id="exit_btn">Выйти</button>
+                    <a class="btn btn-outline-dark mt-2 m-lg-2" href="cngpass.php" id="change_pass">Сменить пароль</a>
+                </div>
             <?php
                 endif;
             ?>
@@ -76,8 +79,8 @@
             data: {'login' : login, 'pass' : pass},
             dataType: 'html',
             success: function (data) {
-                if (data == 'Готово') {
-                    $('#auth_user').text('Вы вошли');
+                if (data.includes('Готово')) {
+                    $('#auth_user').html('Вы вошли');
                     $('#errorBlock').hide();
                     document.location.reload(true);
                 } else {

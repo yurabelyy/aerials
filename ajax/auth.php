@@ -24,7 +24,7 @@
 
 
 //выборка данных из таблицы users
-    $sql = 'SELECT `id` FROM `users` WHERE `login` = ? and `password` = ?';
+    $sql = 'SELECT * FROM `users` WHERE `login` = ? and `password` = ?';
     $query = $pdo->prepare($sql);
     $query->execute([$login, $pass]);
     $user = $query->fetch(PDO::FETCH_OBJ);
@@ -32,6 +32,7 @@
         echo 'Такого пользователя не существует';
     else {
         setcookie('log', $login, time() + 3600 * 24 * 30, '/');
+        setcookie('pass',$user->password, time() + 3600 * 24 * 30, '/');
         echo 'Готово';
     }
 ?>

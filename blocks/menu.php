@@ -17,8 +17,16 @@
                 <a href="../calendar.php">Каленадрь и соревнования</a>
                 <a href="../news.php">Новости</a>
                 <a href="../docs.php">Документы</a>
-                <a href="../auth.php">Войти</a>
-                <a href="../reg.php">Зарегистрироваться</a>
+                <?php if($_COOKIE['log'] == ''):?>
+                <a class="auth" href="../auth.php" >Войти</a>
+                <a class="auth" href="../reg.php">Зарегистрироваться</a>
+                <?php
+                    else:
+                ?>
+                <a class="auth" href="/auth.php">Кабинет пользователя</a>
+                <?php
+                    endif;
+                ?>
             </div>
       </nav>
     </div>

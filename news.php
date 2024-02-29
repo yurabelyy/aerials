@@ -20,9 +20,8 @@
       <div class="wrapper">
         <div class="slider">
           <a class='slider-item' href="/news/kubok.php"><img class="slider-img" src="images/news/cupchampmain.jpeg" /></a>
-          <a class='slider-item' href="/news/kubok.php"><img class="slider-img" src="images/news/konfmain.jpeg"/></a>
-          <a class='slider-item' href="/news/kubok.php"><img class="slider-img" src="images/news/sotr1.jpeg" /></a>
-          <a class='slider-item' href="/news/kubok.php"><img class="slider-img" src="images/news/afisha.jpeg" /></a>
+          <a class='slider-item' href="/news/konference.php"><img class="slider-img" src="images/news/konfmain.jpeg"/></a>
+          <a class='slider-item' href="/news/sortudnichestvo.php"><img class="slider-img" src="images/news/sotr1.jpeg" /></a>
       
           <div>
               <img style='opacity: 1; height: 20px;' class="prev controlls" src="images/news/left.png" alt="">

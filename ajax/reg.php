@@ -5,7 +5,7 @@
     $secondname = htmlspecialchars(trim($_POST['secondname']));
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $login = htmlspecialchars(trim($_POST['login']));
-    $password = htmlspecialchars(trim($_POST['password']));
+    $pass = htmlspecialchars(trim($_POST['password']));
 
 //обработка ошибок ввода
     $error = '';
@@ -17,7 +17,7 @@
         $error = 'Введите почту';
     elseif (strlen($login) <= 3)
         $error = 'Введите логин';
-    elseif (strlen($password) <= 3)
+    elseif (strlen($pass) <= 3)
         $error = 'Введите пароль';
 
     if($error!='') {
@@ -27,7 +27,7 @@
 
 //хеширование пароля
     $hash = "jkhas213ADasdDA12";
-    $password = md5($password . $hash);
+    $pass = md5($pass . $hash);
 
 //подключение к бд
     require_once '../mysql_connect.php';
@@ -35,6 +35,6 @@
 //отправка данных в таблицу users
     $sql = 'INSERT INTO users(login, email, firstname, secondname, password) VALUES(?, ?, ?, ? ,?)';
     $query = $pdo->prepare($sql);
-    $query->execute([$login, $email, $firstname, $secondname, $password]);
+    $query->execute([$login, $email, $firstname, $secondname, $pass]);
 
     echo 'Готово';
