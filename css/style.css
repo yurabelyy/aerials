@@ -8,10 +8,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   position: relative;
   min-height: 100vh;
-  background: url(../images/background/bg9.jpg) no-repeat fixed;
+  background: url(../img/background/bg9.jpg) no-repeat fixed;
   /*width: 1920px;*/
   /*height: 1080px;*/
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 body {
@@ -475,6 +476,26 @@ a.auth {
   font-size: 18px;
   color: rgb(26, 65, 94);
   line-height: 150%;
+}
+/*form*/
+.wrapper-form  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+.form {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgb(26, 65, 94);
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+}
+@media (max-width: 576px) {
+  .form {
+    width: 100%;
+  }
 }
 .content__container p {
   margin: 0 0 20px 0;

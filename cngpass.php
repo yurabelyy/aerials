@@ -16,51 +16,54 @@
     <header class="header">
       <?=require_once 'blocks/menu.php'?>
     </header>
-<main class="container mt-5 content__container">
+<main class="container mt-5 content__container wrapper-form">
      <link rel="stylesheet" href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <div class="row">
-        <div class="col-md-8 mb-3">
+        <div class="mb-3">
             <?php if($_COOKIE['log'] == ''):?>
-            <form action="" method="post">
+            <form action="" method="post" class="form">
                 <label for="login">Логин</label>
-                <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-50" placeholder="login" autocomplete="username">
+                <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-100" placeholder="login" autocomplete="username">
 
                 <label for="pass">Пароль</label>
-                <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2 w-50" placeholder="*********" autocomplete="current-password">
+                <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2 w-100" placeholder="*********" autocomplete="current-password">
 
                 <div class="alert alert-danger mt-4 w-50" id="errorBlock" ></div>
 
-                <button type="button" id="auth_user" class="btn btn-success mt-4 w-50">
+                <button type="button" id="auth_user" class="btn btn-success mt-4 w-100">
                     Войти
                 </button>
             </form>
             <?php
                 else:
             ?>
-                <a class="btn btn-outline-dark mb-2" href="auth.php">В личный кабинет</a>
                 <h2 class="mb-2">Смена пароля для пользователя: <?=$_COOKIE['log']?></h2>
-                <div>
-                    <label for="pass">Старый пароль</label>
-                    <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2 w-50"
-                           placeholder="Введите действующий пароль">
-
-                    <label for="newpass">Новый пароль</label>
-                    <input type="password" name="pass" id="newpass" class="form-control mt-2 mb-2 w-50"
-                           placeholder="Введите новый пароль">
-
-                     <label for="verpass">Подтвердите пароль</label>
-                    <input type="password" name="pass" id="verpass" class="form-control mt-2 mb-2 w-50"
-                           placeholder="Повторите новый пароль">
-
-                    <div class="alert alert-danger mt-4 w-50" id="errorBlock" ></div>
+                <form class="form">
+                    <a class="btn btn-outline-dark mb-2" href="auth.php">< В личный кабинет</a>
+                    <h2 class="mb-2">Смена пароля для пользователя: <?=$_COOKIE['log']?></h2>
                     <div>
-                        <button class="btn btn-warning mt-2" id="change_pass">Сменить пароль</button>
-                        <button type="button" class="btn btn-outline-dark mt-2" id="show_pass">
-                           <i class="fas fa-eye"></i>
-                        </button>
+                        <label for="pass">Старый пароль</label>
+                        <input type="password" name="pass" id="pass" class="form-control mt-2 mb-2 w-100"
+                               placeholder="Введите действующий пароль">
+
+                        <label for="newpass">Новый пароль</label>
+                        <input type="password" name="pass" id="newpass" class="form-control mt-2 mb-2 w-100"
+                               placeholder="Введите новый пароль">
+
+                         <label for="verpass">Подтвердите пароль</label>
+                        <input type="password" name="pass" id="verpass" class="form-control mt-2 mb-2 w-100"
+                               placeholder="Повторите новый пароль">
+
+                        <div class="alert alert-danger mt-4 w-100" id="errorBlock" ></div>
+                        <div>
+                            <button class="btn btn-warning mt-2" id="change_pass">Сменить пароль</button>
+                            <button type="button" class="btn btn-outline-dark mt-2" id="show_pass">
+                               <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </form>
             <?php
                 endif;
             ?>
@@ -128,6 +131,29 @@
                     $("#show_pass").attr("class", "btn btn-outline-dark mt-2");
                 }
             });
+        });
+    });
+    //обработка нажатия на кнопку регистрации, получаем данные по id с помощью jQuery
+    $('#auth_user').click(function (){
+        const login = $('#login').val();
+        const pass = $('#pass').val();
+//ajax запрос передачи данных
+        $.ajax({
+            url: 'ajax/auth.php',
+            type: 'POST',
+            cache: false,
+            data: {'login' : login, 'pass' : pass},
+            dataType: 'html',
+            success: function (data) {
+                if (data.includes('Готово')) {
+                    $('#auth_user').html('Вы вошли');
+                    $('#errorBlock').hide();
+                    document.location.reload(true);
+                } else {
+                    $('#errorBlock').show();
+                    $('#errorBlock').text(data);
+                }
+            }
         });
     });
 

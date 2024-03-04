@@ -1,6 +1,7 @@
 {
     "require": {
         "twbs/bootstrap": "5.3.3",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+      "ext-mysqli": "*"
     }
 }

@@ -7,7 +7,7 @@
     <title><?=$website_title?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="../images/logo.png">
+    <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css" />
     <link

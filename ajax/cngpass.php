@@ -39,6 +39,7 @@
     $user = $query->fetch(PDO::FETCH_OBJ);
     if ($user->id == 0)
         echo 'Неверный пароль';
+
     else {
         $sql = 'UPDATE `users` SET `password`= ? WHERE `id`= ?';
         $query = $pdo->prepare($sql);

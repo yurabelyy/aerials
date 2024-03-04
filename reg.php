@@ -15,31 +15,31 @@
     <header class="header">
       <?=require_once 'blocks/menu.php'?>
     </header>
-<main class="container mt-5 content__container">
+<main class="container mt-5 content__container wrapper-form">
      <link rel="stylesheet" href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <div class="row">
-        <div class="col-md-8 mb-3">
-            <form action="" method="post">
+        <div class="mb-3">
+            <form action="" method="post" class="form">
                 <label for="firstname">Ваше имя</label>
-                <input type="text" name="firstname" id="firstname" class="form-control mt-2 mb-2 w-50 " placeholder="Иван" autofocus required>
+                <input type="text" name="firstname" id="firstname" class="form-control mt-2 mb-2 w-100 " placeholder="Иван" autofocus required>
 
                 <label for="secondname">Ваша фамилия</label>
-                <input type="text" name="secondname" id="secondname" class="form-control mt-2 mb-2 w-50" placeholder="Иванов" required>
+                <input type="text" name="secondname" id="secondname" class="form-control mt-2 mb-2 w-100" placeholder="Иванов" required>
 
                 <label for="email">Эл.почта</label>
-                <input type="email" name="email" id="email" class="form-control mt-2 mb-2 w-50" placeholder="example@mail.com"
+                <input type="email" name="email" id="email" class="form-control mt-2 mb-2 w-100" placeholder="example@mail.com"
                        pattern="^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$" required autocomplete="off">
 
                 <label for="login">Логин</label>
-                <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-50" placeholder="login">
+                <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-100" placeholder="login">
 
                 <label for="password">Пароль</label>
-                <input type="password" name="password" id="password" class="form-control mt-2 mb-2  w-50" placeholder="*********">
+                <input type="password" name="password" id="password" class="form-control mt-2 mb-2  w-100" placeholder="*********">
 
-                <div class="alert alert-danger mt-2 mb-2 w-50" id="errorBlock" style="display: none"></div>
+                <div class="alert alert-danger mt-2 mb-2 w-100" id="errorBlock" style="display: none"></div>
 
-                <button type="button" id="reg_user" class="btn btn-success mt-4 w-50">
+                <button type="button" id="reg_user" class="btn btn-success mt-4 w-100">
                     Зарегистрироваться
                 </button>
             </form>

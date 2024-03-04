@@ -1,6 +1,9 @@
 <?php
-//получаем данные из массива $_POST
+//подключение к бд
+    require_once '../mysql_connect.php';
     global $pdo;
+//получаем данные из массива $_POST
+if (isset($_POST['login']) && isset($_POST['pass'])) {
     $login = htmlspecialchars(trim($_POST['login']));
     $pass = htmlspecialchars(trim($_POST['pass']));
 
@@ -11,16 +14,14 @@
     elseif (strlen($pass) <= 3)
         $error = 'Введите пароль';
 
-    if($error!='') {
+    if ($error != '') {
         echo $error;
         exit();
     }
 
 //хеширование пароля
     $hash = "jkhas213ADasdDA12";
-    $pass= md5($pass . $hash);
-//подключение к бд
-    require_once '../mysql_connect.php';
+    $pass = md5($pass . $hash);
 
 
 //выборка данных из таблицы users
@@ -28,11 +29,15 @@
     $query = $pdo->prepare($sql);
     $query->execute([$login, $pass]);
     $user = $query->fetch(PDO::FETCH_OBJ);
-    if ($user->id == 0)
-        echo 'Такого пользователя не существует';
-    else {
+
+    if ($user === false) {
+        echo 'Такого пользователя не существует или неверный пароль';
+    } else {
         setcookie('log', $login, time() + 3600 * 24 * 30, '/');
-        setcookie('pass',$user->password, time() + 3600 * 24 * 30, '/');
+        setcookie('pass', $user->password, time() + 3600 * 24 * 30, '/');
         echo 'Готово';
     }
+} else {
+    echo 'Введите логин и пароль';
+}
 ?>
