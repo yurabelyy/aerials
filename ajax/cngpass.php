@@ -27,11 +27,16 @@
     $hash = "jkhas213ADasdDA12";
     $pass= md5($pass . $hash);
     $newpass = md5($newpass . $hash);
+if (!empty($_COOKIE['log'])) {
     $login = $_COOKIE['log'];
+}else{
+    echo 'куки не создан';
+}
+
 
 //подключение к бд
     require_once '../mysql_connect.php';
-
+    global $login;
 //выборка данных из таблицы users
     $sql = 'SELECT `id` FROM `users` WHERE `login` = ? AND `password` = ?';
     $query = $pdo->prepare($sql);
@@ -44,7 +49,6 @@
         $sql = 'UPDATE `users` SET `password`= ? WHERE `id`= ?';
         $query = $pdo->prepare($sql);
         $query->execute([$newpass, $user->id]);
-
         echo 'Готово';
     }
-?>
+

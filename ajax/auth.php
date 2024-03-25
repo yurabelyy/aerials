@@ -23,7 +23,6 @@ if (isset($_POST['login']) && isset($_POST['pass'])) {
     $hash = "jkhas213ADasdDA12";
     $pass = md5($pass . $hash);
 
-
 //выборка данных из таблицы users
     $sql = 'SELECT * FROM `users` WHERE `login` = ? and `password` = ?';
     $query = $pdo->prepare($sql);
@@ -40,4 +39,6 @@ if (isset($_POST['login']) && isset($_POST['pass'])) {
 } else {
     echo 'Введите логин и пароль';
 }
-?>
+
+
+

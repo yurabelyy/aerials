@@ -29,8 +29,8 @@
     <div class="row">
         <div class="mb-3">
             <form action="" method="post" class="form">
-                <?php //if(empty($_COOKIE['log']))
-                if($_COOKIE['log'] == ''): ?>
+                <?php if(empty($_COOKIE['log'])):
+                //if($_COOKIE['log'] == ''): ?>
                 <label for="login">Логин</label>
                 <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-100" placeholder="login" autocomplete="username">
 

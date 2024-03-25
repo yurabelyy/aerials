@@ -13,7 +13,6 @@
       <nav class="header-menu">
             <div class="header-topnav">
                 <a href="../index.php">Главная</a>
-                <a href="../pages/athletes.php">Спортсмены</a>
                 <a href="../pages/calendar.php">Каленадрь и соревнования</a>
                 <a href="../pages/news.php">Новости</a>
                 <a href="../pages/docs.php">Документы</a>
@@ -24,6 +23,7 @@
                     else:
                 ?>
                 <a class="auth" href="/auth.php">Кабинет пользователя</a>
+                <a href="../pages/athletes_new.php">Спортсмены</a>
                 <?php
                     endif;
                 ?>

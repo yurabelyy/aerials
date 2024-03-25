@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
     <div class="row">
         <div class="mb-3">
-            <?php if($_COOKIE['log'] == ''):?>
+            <?php if(empty($_COOKIE['log'])):?>
             <form action="" method="post" class="form">
                 <label for="login">Логин</label>
                 <input type="text" name="login" id="login" class="form-control mt-2 mb-2 w-100" placeholder="login" autocomplete="username">
@@ -74,28 +74,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 
-// кнопка выхода
-       $('#exit_btn').click(function (){
-//возврат в кабинет пользователя
-       $.ajax({
-           url: 'ajax/auth.php',
-           type: 'POST',
-           cache: false,
-           data: {},
-           dataType: 'html',
-           success: function () {
-            document.location.reload(true);
-           }
-       });
-   });
+// // кнопка выхода
+//        $('#exit_btn').click(function (){
+// //возврат в кабинет пользователя
+//        $.ajax({
+//            url: 'ajax/auth.php',
+//            type: 'POST',
+//            cache: false,
+//            data: {},
+//            dataType: 'html',
+//            success: function () {
+//             document.location.reload(true);
+//            }
+//        });
+//    });
 
-//обработка нажатия на кнопку регистрации, получаем данные по id с помощью jQuery
+//обработка нажатия на кнопку смены пароля jQuery
     $('#change_pass').click(function (){
         const pass = $('#pass').val();
         const newpass = $('#newpass').val();
         const verpass = $('#verpass').val();
-
-//ajax запрос передачи данных
         $.ajax({
             url: 'ajax/cngpass.php',
             type: 'POST',
@@ -107,7 +105,6 @@
                     $('#change_pass').html('Пароль изменен');
                     $('#change_pass').prop('disabled', true);
                     $('#errorBlock').hide();
-                    // document.location.reload(true);
                 } else {
                     $('#errorBlock').show();
                     $('#errorBlock').text(data);
